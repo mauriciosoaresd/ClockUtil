@@ -1,0 +1,119 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+.lightMode {
+	background-color: white;
+	color: black;
+}
+
+.darkMode {
+	background-color: black;
+	color: white;
+}
+
+nav {
+	height: 50px;
+	display: flex;
+}
+
+nav>* {
+	font-size: 1.2rem;
+	margin: auto 15px;
+	padding: 5px 10px;
+}
+
+nav>a, #layoutButton:hover {
+	transform: scale(1.5) !important;
+}
+
+#layoutButton {
+	margin-left: auto;
+	background-color: inherit;
+	border: none;
+}
+
+.darkMode nav>a:hover {
+	text-shadow: #fff 0px 0px 5px, #cccec4 0px 0px 10px, #231818 0px 0px
+		15px, #302e1e 0px 0px 20px, #211f11 0px 0px 30px, #4d4820 0px 0px 40px,
+		#585222 0px 0px 50px;
+}
+
+.lightMode nav>a:hover {
+	text-shadow: 5px 10px 12px black;
+}
+
+a, #layoutButton {
+	color: inherit;
+	text-decoration: inherit;
+	transition: all .2s ease-in-out;
+}
+
+a:hover {
+	font-weight: bolder;
+}
+
+h1 {
+	text-align: center;
+}
+
+#clockDiv {
+	font-family: "Orbitron";
+	font-size: 8rem;
+	text-align: center;
+	margin-top: 20vh;
+	text-shadow: 16px 42px 20px black;
+}
+
+.lightMode>#clockDiv {
+	text-shadow: 16px 42px 20px black;
+}
+
+.darkMode>#clockDiv {
+	text-shadow: #fff 0px 0px 5px, #cccec4 0px 0px 10px, #231818 0px 0px
+		15px, #302e1e 0px 0px 20px, #211f11 0px 0px 30px, #4d4820 0px 0px 40px,
+		#585222 0px 0px 50px;
+}
+
+.selectorDiv {
+	display: flex;
+	flex-direction: column;
+	width: max-content;
+	margin: auto;
+	text-align: center;
+}
+
+.selectorDiv>selector {
+	width: auto;
+}
+
+footer {
+	text-align: center;
+	margin-bottom: 20px
+	
+}
+
+.footerButtons i {
+    font-size: 30px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.footerButtons i:hover {
+    transition: transform .2s;
+    border-radius: 5px;
+    color: #6610f2;
+    transform: scale(1.1);
+    background-color: white;
+}
+
+.footerButtons a {
+    margin: 0 15px;
+}

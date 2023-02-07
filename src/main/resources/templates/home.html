@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="~{fragments :: head}">
+</head>
+<body class="lightMode">
+	<nav th:replace="~{fragments :: navigation}"></nav>
+	
+	<h1 th:text="${titleH1}"></h1>
+	
+	<div id="clockDiv"></div>
+	
+	<div class="selectorDiv">
+		<label for="timezones">Select a timezone</label>
+		<select name="timezones" id="timeZoneSelect" value=""></select>
+	</div>
+		
+	
+	<footer th:replace="~{fragments :: footer}"></footer>
+</body>
+</html>

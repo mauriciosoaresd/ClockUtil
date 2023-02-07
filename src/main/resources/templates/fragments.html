@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head th:fragment="head">
+<meta charset="UTF-8">
+<title th:text="${titlePage}"></title>
+<script defer th:src="@{/script.js}" onload="run();"></script>
+<link th:href="@{/style.css}" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Orbitron'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet"
+	th:href="@{/webjars/font-awesome/5.10.1/css/all.css}" type="text/css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+<body>
+	<nav th:fragment="navigation">
+		<a href="/">Home</a>
+	</nav>
+
+	<footer th:fragment="footer">
+		<div class="footerButtons">
+			<a href="https://github.com/mauriciosoaresd" target="_blank"
+				rel="noopener noreferrer"> <i class="fab fa-github"></i>
+
+			</a> <a href="https://www.linkedin.com/in/mauriciosdomingues/"
+				target="_blank" rel="noopener noreferrer"> <i
+				class="fab fa-linkedin-in"></i>
+			</a>
+		</div>
+	</footer>
+</body>
+</html>
