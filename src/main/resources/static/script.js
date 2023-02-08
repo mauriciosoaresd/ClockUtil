@@ -4,19 +4,19 @@ const layoutClasses = document.body.classList
 function setSelectTimezones() {
 	let select = document.getElementById("timeZoneSelect");
 	actualTz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-	
-	
+
+
 	Intl.supportedValuesOf('timeZone').forEach(x => {
 		if (x == actualTz) {
 			select.add(new Option(x, x, true))
 
 		}
 		else {
-			select.add(new Option(x,x,false))
+			select.add(new Option(x, x, false))
 
 		}
 	})
-	console.log(select.value)
+
 	select.value = actualTz;
 	setClock(select.value);
 }
@@ -31,8 +31,8 @@ function setClock() {
 
 	document.getElementById("clockDiv").innerHTML = time;
 	setTimeout(setClock, 1000);
-	
-	if(time.substring(0,2) >= 18 || time.substring(0,2) < 6) {
+
+	if (time.substring(0, 2) >= 18 || time.substring(0, 2) < 6) {
 		layoutClasses.remove("lightMode");
 		layoutClasses.add("darkMode");
 	} else {
@@ -40,7 +40,7 @@ function setClock() {
 		layoutClasses.add("lightMode");
 	}
 	time = null;
-	
+
 }
 
 function checkZeros(n) {
