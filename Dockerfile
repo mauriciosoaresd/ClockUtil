@@ -1,7 +1,7 @@
 #
 # Build stage
 #
-FROM maven:3.9.0-jdk-19 AS build
+FROM openjdk:jdk-19
 COPY . .
 RUN mvn clean package
 
